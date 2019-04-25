@@ -1,0 +1,26 @@
+{
+    "parent": "av:root",
+    "display": {
+        "title": {
+            "text": "Overcrafter"
+        },
+        "description": {
+            "text": "Craft an enchanted golden apple"
+        },
+        "icon": {
+            "item": "minecraft:enchanted_golden_apple"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "craft": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "av-lootrecipes:enchanted_golden_apple"
+            }
+        }
+    }
+}

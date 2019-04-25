@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "text": "AlmostVanilla"
+        },
+        "description": {
+            "text": "Play on a server running AlmostVanilla"
+        },
+        "icon": {
+            "item": "minecraft:music_disc_strad"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "textures/block/white_concrete_powder.png"
+    },
+    "criteria": {
+        "play": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "dimension": "overworld"
+            }
+        }
+    }
+}
