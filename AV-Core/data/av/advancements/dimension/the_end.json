@@ -1,0 +1,29 @@
+{
+    "display": {
+        "title": {
+            "text": "The End"
+        },
+        "description": {
+            "text": "Current Dimension"
+        },
+        "icon": {
+            "item": "minecraft:end_stone"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "av:root",
+    "criteria": {
+        "the_end": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "dimension": "the_end"
+            }
+        }
+    },
+    "rewards": {
+        "function": "av:dimension/the_end"
+    }
+}
