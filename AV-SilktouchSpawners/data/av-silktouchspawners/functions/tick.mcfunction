@@ -17,13 +17,13 @@ execute at @a[scores={av-use_spawner=1..}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 m
 scoreboard players operation @a[scores={av-use_spawner=1..,av-dimension=0}] av-counter = #av-counter av-counter
 
 # overworld -> zombie, skeleton, or spider
-execute at @a[scores={av-use_spawner=1..,av-dimension=0,av-counter=..32}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:spawner{SpawnData:{id:"minecraft:skeleton"}} replace minecraft:command_block{Command:"AV-SilktouchSpawners"}
-execute at @a[scores={av-use_spawner=1..,av-dimension=0,av-counter=33..66}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:spawner{SpawnData:{id:"minecraft:zombie"}} replace minecraft:command_block{Command:"AV-SilktouchSpawners"}
-execute at @a[scores={av-use_spawner=1..,av-dimension=0,av-counter=67..}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:spawner{SpawnData:{id:"minecraft:spider"}} replace minecraft:command_block{Command:"AV-SilktouchSpawners"}
+execute at @a[scores={av-use_spawner=1..,av-counter=..32},nbt={Dimension:0}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:spawner{SpawnData:{id:"minecraft:skeleton"}} replace minecraft:command_block{Command:"AV-SilktouchSpawners"}
+execute at @a[scores={av-use_spawner=1..,av-counter=33..66},nbt={Dimension:0}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:spawner{SpawnData:{id:"minecraft:zombie"}} replace minecraft:command_block{Command:"AV-SilktouchSpawners"}
+execute at @a[scores={av-use_spawner=1..,av-counter=67..},nbt={Dimension:0}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:spawner{SpawnData:{id:"minecraft:spider"}} replace minecraft:command_block{Command:"AV-SilktouchSpawners"}
 # nether -> blaze
-execute at @a[scores={av-use_spawner=1..,av-dimension=1}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:spawner{SpawnData:{id:"minecraft:blaze"}} replace minecraft:command_block{Command:"AV-SilktouchSpawners"}
+execute at @a[scores={av-use_spawner=1..},nbt={Dimension:-1}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:spawner{SpawnData:{id:"minecraft:blaze"}} replace minecraft:command_block{Command:"AV-SilktouchSpawners"}
 # end -> enderman
-execute at @a[scores={av-use_spawner=1..,av-dimension=2}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:spawner{SpawnData:{id:"minecraft:enderman"}} replace minecraft:command_block{Command:"AV-SilktouchSpawners"}
+execute at @a[scores={av-use_spawner=1..},nbt={Dimension:1}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:spawner{SpawnData:{id:"minecraft:enderman"}} replace minecraft:command_block{Command:"AV-SilktouchSpawners"}
 
 # set the score back to 0
 scoreboard players set @a[scores={av-use_spawner=1..}] av-use_spawner 0
