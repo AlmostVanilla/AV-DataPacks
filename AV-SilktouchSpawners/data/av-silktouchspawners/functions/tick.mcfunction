@@ -1,8 +1,5 @@
 
-# Allow mining spawners with Silk Touch
-
-# at all players that have mined a spawner, and their selected item has the silk touch enchantment, summon a spawner
-execute at @a[scores={av-mine_spawner=1..},nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:silk_touch"}]}}}] run summon item ^ ^1 ^1 {Item:{id:"minecraft:spawner",Count:1}}
+# Prevent experience drops when mining with silk touch
 
 # clear nearby experience to prevent using this to farm experience
 execute at @a[scores={av-mine_spawner=1..},nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:silk_touch"}]}}}] run kill @e[type=minecraft:experience_orb,distance=..5]
