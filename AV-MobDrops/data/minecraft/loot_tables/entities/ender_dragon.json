@@ -12,7 +12,7 @@
               "count": 1
             }
           ],
-          "name": "minecraft:elytra"
+          "name": "minecraft:dragon_head"
         }
       ]
     },
@@ -21,13 +21,13 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:dragon_head"
+          "name": "minecraft:elytra"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:random_chance",
-          "chance": 0.5
+          "chance": 0.6
         }
       ]
     }
