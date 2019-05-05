@@ -14,7 +14,7 @@ scoreboard players set @a[scores={av-mine_spawner=1..}] av-mine_spawner 0
 execute at @a[scores={av-use_spawner=1..}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:command_block{Command:"AV-SilktouchSpawners"} replace minecraft:spawner{SpawnData:{id:"minecraft:pig"}}
 
 # for people in the overworld, put a pseudo-random value into av-counter
-scoreboard players operation @a[scores={av-use_spawner=1..,av-dimension=0}] av-counter = #av-counter av-counter
+scoreboard players operation @a[scores={av-use_spawner=1..},nbt={Dimension:0}] av-counter = #av-counter av-counter
 
 # overworld -> zombie, skeleton, or spider
 execute at @a[scores={av-use_spawner=1..,av-counter=..32},nbt={Dimension:0}] run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:spawner{SpawnData:{id:"minecraft:skeleton"}} replace minecraft:command_block{Command:"AV-SilktouchSpawners"}
