@@ -3,8 +3,8 @@
 execute if entity @a[scores={av-insomnia=1}] as @a[nbt={SleepTimer:1s}] run tellraw @s {"color":"gray","text":"","extra":["The following players are experiencing insomnia: ",{"selector":"@a[scores={av-insomnia=1..}]"}]}
 execute unless entity @a[scores={av-insomnia=1}] as @a[nbt={SleepTimer:1s}] run tellraw @s {"color":"gray","text":"Nobody is experiencing insomnia"}
 
-# if a player hits the 120 ticks sleeping in bed, attempt to skip night
-execute if entity @a[nbt={SleepTimer:120s}] run function av-insomnia:attempt_skip_night
+# if a player hits 100 ticks sleeping in bed, attempt to skip night
+execute if entity @a[nbt={SleepTimer:100s}] run function av-insomnia:attempt_skip_night
 
 # allow players to set their insomnia status
 # handle players setting/disabling insomnia
