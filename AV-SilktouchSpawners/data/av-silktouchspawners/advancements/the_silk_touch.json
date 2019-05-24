@@ -1,0 +1,29 @@
+{
+    "parent": "av:root",
+    "display": {
+        "title": {
+            "text": "The Silk Touch"
+        },
+        "description": {
+            "text": "Enchant a pickaxe with Silk Touch"
+        },
+        "icon": {
+            "item": "minecraft:diamond_pickaxe"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "have_silk_touch_pick": {
+            "trigger": "minecraft:enchanted_item",
+            "conditions": {
+                "item": {
+                    "item": "minecraft:ender_chest",
+                    "enchantments": [{"enchantment": "minecraft:silk_touch"}]
+                }
+            }
+        }
+    }
+}

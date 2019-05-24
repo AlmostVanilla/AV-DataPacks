@@ -1,0 +1,26 @@
+{
+    "parent": "av-silktouchspawners:the_silk_touch",
+    "display": {
+        "title": {
+            "text": "Obtain Spawner"
+        },
+        "description": {
+            "text": "Use a Silk Touch pickaxe to obtain a monster spawner"
+        },
+        "icon": {
+            "item": "minecraft:spawner"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "have_spawner": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [{"item": "minecraft:spawner"}]
+            }
+        }
+    }
+}

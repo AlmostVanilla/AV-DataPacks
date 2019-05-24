@@ -44,3 +44,4 @@ title @s actionbar {"color":"dark_purple","bold":true,"text":"","extra":["Ender 
 
 # give advancement if storage happened
 advancement grant @s[scores={av-xp-dummy=1..}] until av-enderxpstorage:untouchable_xp
+advancement grant @s[scores={av-stored-xp=10000..}] until av-enderxpstorage:tons_of_storage

@@ -1,0 +1,26 @@
+{
+    "parent": "av-enderxpstorage:untouchable_xp",
+    "display": {
+        "title": {
+            "text": "Tons of Storage"
+        },
+        "description": {
+            "text": "How 'bout a little more? Store 10,000 XP in an Ender Chest"
+        },
+        "icon": {
+            "item": "minecraft:enchanting_table"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "store_xp": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "experience": 1000
+    }
+}
