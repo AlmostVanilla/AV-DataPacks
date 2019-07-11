@@ -1,0 +1,12 @@
+{
+  "replace": true,
+  "values": [
+    "#minecraft:small_flowers",
+    "minecraft:dirt",
+    "minecraft:tnt",
+    "minecraft:cactus",
+    "minecraft:pumpkin",
+    "minecraft:melon",
+    "minecraft:netherrack"
+  ]
+}
