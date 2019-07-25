@@ -39,8 +39,14 @@ xp add @s[scores={av-xp-dummy=42}] -10 points
 scoreboard players add @s[scores={av-xp-dummy=43}] av-stored-xp 8
 xp add @s[scores={av-xp-dummy=43}] -20 points
 
+# play sound
+execute as @s[scores={av-xp-dummy=1..}] run playsound minecraft:item.bottle.fill_dragonbreath player @a ~ ~ ~ 1 2
+
+# emit particle
+execute as @s[scores={av-xp-dummy=1..}] run particle minecraft:item minecraft:ender_eye ~ ~ ~ .2 .5 .2 0 10 force
+
 # show title
-title @s actionbar {"color":"dark_purple","bold":true,"text":"","extra":["Ender XP: ",{"score":{"name":"*","objective":"av-stored-xp"}}]}
+title @s actionbar [{"color":"red","bold":true,"text":"▼ "},{"color":"dark_purple","bold":true,"text":"","extra":["Ender XP: ",{"score":{"name":"*","objective":"av-stored-xp"}}]},{"color":"red","bold":true,"text":" ▼"}]
 
 # give advancement if storage happened
 advancement grant @s[scores={av-xp-dummy=1..}] until av-enderxpstorage:untouchable_xp
