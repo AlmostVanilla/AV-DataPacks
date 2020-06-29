@@ -12,6 +12,3 @@ scoreboard players set @a[scores={av-mine_spawner=1..}] av-mine_spawner 0
 
 # convert pig spawner into a special command block
 execute as @a[scores={av-use_spawner=1..}] run function av-silktouchspawners:set_spawner_type 
-
-# set the score back to 0
-scoreboard players set @a[scores={av-use_spawner=1..}] av-use_spawner 0

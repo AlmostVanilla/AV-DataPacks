@@ -12,4 +12,6 @@ execute as @a store result score @s av-insomnia-slep run data get entity @s Slee
 # - they are in the overworld
 
 # we want to execute a skip to daylight UNLESS a player has all of these
-execute unless entity @a[scores={av-insomnia-slep=..99,av-insomnia=0},nbt={Dimension:0}] run time set 0
+# different dimension checks for different versions
+execute if score #av-mcversion av-mcversion matches ..115 unless entity @a[scores={av-insomnia-slep=..99,av-insomnia=0},nbt={Dimension:0}] run time set 0
+execute if score #av-mcversion av-mcversion matches 116.. unless entity @a[scores={av-insomnia-slep=..99,av-insomnia=0},nbt={Dimension:"minecraft:overworld"}] run time set 0
