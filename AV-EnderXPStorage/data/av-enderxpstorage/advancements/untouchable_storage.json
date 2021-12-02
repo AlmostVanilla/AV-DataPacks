@@ -19,7 +19,7 @@
         "have_ender_chest": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
-                "items": [{"item": "minecraft:ender_chest"}]
+                "items": [{"items": ["minecraft:ender_chest"]}]
             }
         }
     }

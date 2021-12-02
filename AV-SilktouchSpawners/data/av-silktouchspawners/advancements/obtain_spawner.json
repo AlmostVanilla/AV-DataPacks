@@ -19,7 +19,7 @@
         "have_spawner": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
-                "items": [{"item": "minecraft:spawner"}]
+                "items": [{"items": ["minecraft:spawner"]}]
             }
         }
     }
